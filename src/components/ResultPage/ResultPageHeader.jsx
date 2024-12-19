@@ -1,6 +1,6 @@
-import './ResultPage.css'
 import { MdOutlineFileUpload } from "react-icons/md";
 import { CgMenuGridO } from "react-icons/cg";
+import './ResultPage.css'
 
 function ResultPageHeader() {
   return (

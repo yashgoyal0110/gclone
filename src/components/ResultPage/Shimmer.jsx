@@ -13,12 +13,11 @@ function Shimmer() {
 
       <div className="main-shine shine"></div>
 
-<div className="lines">
-  <p className="shine line line-short"></p>
-  <p className="shine line line-medium"></p>
-  <p className="shine line line-long"></p>
-</div>
-
+      <div className="lines">
+        <p className="shine line line-short"></p>
+        <p className="shine line line-medium"></p>
+        <p className="shine line line-long"></p>
+      </div>
 
       <div className="main-shine shine"></div>
       <div className="lines">

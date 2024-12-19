@@ -1,7 +1,8 @@
+import { AppContext } from "../../main.jsx";
 import { useState, useEffect, useContext, useRef } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { AppContext } from "../../main.jsx";
+import { RxCross2 } from "react-icons/rx";
 import { mockData } from "./mockData.js";
 import "./SearchSection.css";
 import Header from "../Header/Header";
@@ -67,6 +68,11 @@ const SearchSection = () => {
     }
   }, [searchQuery]);
 
+  function crossButtonHandler() {
+    setSearchQuery("");
+    setFilteredSuggestions(mockData);
+  }
+
   return (
     <>
       <Header />
@@ -95,6 +101,15 @@ const SearchSection = () => {
                     }
                   }}
                 />
+                {searchQuery ? (
+                  <div
+                    onClick={() => crossButtonHandler()}
+                    className="cross-btn-container"
+                  >
+                    <RxCross2 className="cross-icon-search" />
+                    <div className="bar">|</div>
+                  </div>
+                ) : null}
                 <VoiceSearch />
                 <CameraSearch
                   onClick={() => {
@@ -145,7 +160,7 @@ const SearchSection = () => {
             </div>
 
             {filteredSuggestions.length === 0 ||
-            filteredSuggestions.length > 6 ? (
+            filteredSuggestions.length > 6? (
               <LanguageOptions />
             ) : null}
           </>

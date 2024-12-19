@@ -1,5 +1,3 @@
-import "./ResultPage.css";
-import "./mockResults.js";
 import { AppContext } from "../../main.jsx";
 import { useContext, useState, useEffect, useRef } from "react";
 import ResultPageHeader from "./ResultPageHeader.jsx";
@@ -8,6 +6,8 @@ import FindImageSource from "./FindImageSource.jsx";
 import ProductGrid from "./ProductGrid.jsx";
 import Cropper from "react-easy-crop";
 import Shimmer from "./Shimmer.jsx";
+import "./ResultPage.css";
+import "./mockResults.js";
 
 
 function ResultPage() {

@@ -1,6 +1,5 @@
-import "./ResultPage.css";
 import { mockResults } from "./mockResults.js";
-
+import "./ResultPage.css";
 function ProductGrid() {
   return (
     <div className="product-grid">
